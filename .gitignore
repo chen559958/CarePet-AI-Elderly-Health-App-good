@@ -22,6 +22,7 @@ wheels/
 *.egg
 venv/
 .venv/
+venv_win/
 .env
 
 # MacOS
@@ -33,8 +34,13 @@ venv/
 
 # Database
 data/gamemed.db
+app.db
 startup_log.txt
 test_run.txt
+
+# Documents
+*.xlsx
+*.xls
 
 # Flet
 dist/
