@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "gamemed"
+version = "0.1.0"
+description = "GameMed – Gamified medication reminder app (Flet MVP skeleton)"
+authors = ["GameMed Team <dev@example.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flet = "^0.23.2"
+python-dateutil = "^2.9.0"
+psycopg2-binary = "^2.9.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.1"
+ruff = "^0.5.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
