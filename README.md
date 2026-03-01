@@ -1,31 +1,61 @@
-# GameMed MVP Skeleton
+# 🐾 CarePet AI: 智慧長者用藥與健康管理系統
 
-This repository hosts the initial Flet-based MVP for GameMed, the gamified medication reminder app described in `docs/ENGINEERING_BLUEPRINT.md`.
+[![Flet App](https://img.shields.io/badge/Framework-Flet-orange.svg)](https://flet.dev)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Tech stack
+## 🌟 專案簡介
 
-- Python 3.11
-- Flet (Flutter renderer)
-- SQLite (local, offline-first)
+**CarePet AI** 是一款專為長者設計的「遊戲化」用藥管理 App。透過可愛的寵物互動與任務系統，將枯燥的用藥提醒轉化為有趣的日常陪伴，旨在提高長者用藥依從性，並讓家屬隨時掌握長輩的健康狀況。
 
-## Getting started
+## ✨ 核心特色
 
-1. Install Poetry (or use pip) and dependencies:
-   ```bash
-   poetry install
-   ```
-2. Run the app in debug:
-   ```bash
-   poetry run python -m app.main
-   ```
-3. The initial run seeds the SQLite database from `data/schema.sql`.
+- **🐶 寵物陪伴系統**：每日按時服藥可獲得點數，用於餵食、清潔與陪伴寵物，提升參與感。
+- **📸 智慧影像辨識**：掃描藥袋自動分析資訊，簡化輸入手續。
+- **💊 多時段用藥提醒**：支援餐前/餐後/睡前等多種彈性時段設定。
+- **🩺 健康紀錄管理**：血壓、心率數據追蹤，並產出易讀的趨勢圖表。
+- **👨‍👩‍👧‍👦 家屬通知連動**：漏藥自動發送 LINE 通知，遠端守護最愛。
 
-## Project layout
+## 🛠️ 技術棧
 
-See the engineering blueprint for the directory structure, domain rules, and UI spec. The current codebase ships a scaffold with placeholder implementations so you can iterate feature-by-feature.
+- **Frontend**: [Flet](https://flet.dev/) (Flutter for Python) - 跨平台介面
+- **Backend**: Python 3.11+
+- **Database**: PostgreSQL (雲端) / SQLite (本地緩存)
+- **AI Service**: 智譜 AI (大模型影像分析)
 
-## Next steps
+## 🚀 快速開始
 
-- Flesh out repositories and domain engines using the provided interfaces.
-- Implement ReminderEvent flows (taken/snooze/missed) and integrate the Undo manager.
-- Replace placeholder UI elements with production designs from the blueprint.
+### 1. 複製專案
+```bash
+git clone https://github.com/chen559958/CarePet-AI-Elderly-Health-App-good.git
+cd CarePet-AI-Elderly-Health-App-good
+```
+
+### 2. 安裝依賴
+```bash
+pip install -r requirements.txt
+```
+
+### 3. 環境設定
+將 `.env.example` 重新命名為 `.env` 並填入您的金鑰：
+```ini
+ZHIPU_API_KEY=您的金鑰
+DB_HOST=您的資料庫位址
+```
+
+### 4. 執行程式
+```bash
+python main.py
+```
+
+## 📂 專案結構
+
+- `app/`: 核心邏輯與容器管理
+- `domain/`: 業務領域邏輯 (提醒引擎、寵物邏輯)
+- `data/`: 資料庫封裝層與 Migration
+- `ui/`: Flet 頁面元件與樣式設定
+- `assets/`: 所有的圖檔、圖示與字體
+
+---
+*本專案由 AI 輔助開發，致力於實現高品質的長者照護體驗。*
+
